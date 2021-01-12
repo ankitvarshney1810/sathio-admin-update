@@ -99,6 +99,16 @@ h6 {
   text-decoration: none;
 }
 
+.btn-light {
+  background-color: #e2e6ea !important;
+  border-color: #e2e6ea !important;
+}
+
+.btn-light:hover {
+  background-color: #b6b8bb !important;
+  border-color: #b6b8bb !important;
+}
+
 .gj-picker {
   z-index: 7 !important;
   -webkit-box-shadow: 1px 2px 15px 2px #00000050;
@@ -246,7 +256,7 @@ h6 {
   font-size: 18px;
 }
 
-.sidebar .head .logo .btnmenu {
+.sidebar .head .logo .side-btnmenu {
   display: none;
 }
 
@@ -267,7 +277,7 @@ h6 {
   height: initial;
   display: -ms-grid;
   display: grid;
-  padding: 22px 16px;
+  padding: 15px 16px;
 }
 
 .sidebar .body a {
@@ -308,7 +318,7 @@ h6 {
 header {
   position: fixed;
   left: 200px;
-  height: 60px;
+  height: 40px;
   right: 0;
   top: 0;
   background-color: #ffffff;
@@ -326,8 +336,8 @@ header .head {
   height: inherit;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 90px 200px;
-      grid-template-columns: auto 90px 200px;
+  -ms-grid-columns: auto 90px 160px;
+      grid-template-columns: auto 90px 160px;
 }
 
 header .head .btnmenu {
@@ -353,28 +363,25 @@ header .head .btnmenu .bars {
 
 header .head .notify {
   text-align: right;
-  margin: auto 8px;
+  margin: auto;
   font-size: 22px;
   color: #888888;
 }
 
 header .head .notify .icon {
   position: relative;
-  padding: 6px;
-  margin-left: 0px;
+  padding: 2px;
+  margin: 5px;
 }
 
 header .head .notify .icon .count {
   position: absolute;
-  top: -2px;
+  top: 0;
   right: 0;
-  width: 22px;
-  height: 22px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  text-align: center;
-  font-size: 10px;
   color: #fff;
-  line-height: 1.8;
   border: 2px solid #fff;
   background-color: #1E2671;
 }
@@ -391,6 +398,7 @@ header .head .sub-admin {
 
 header .head .sub-admin .pic {
   position: relative;
+  display: none;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -408,7 +416,7 @@ header .head .sub-admin .pic img {
 header .head .sub-admin .title {
   display: -ms-grid;
   display: grid;
-  margin-right: 12px;
+  margin: 0 12px;
 }
 
 header .head .sub-admin .title strong {
@@ -423,8 +431,8 @@ header .head .sub-admin .title small {
 
 header .head .sub-admin .fa-caret-down {
   position: absolute;
-  right: 2px;
-  top: 25px;
+  right: 12px;
+  top: 12px;
   font-size: 18px;
   color: #888888;
 }
@@ -433,7 +441,7 @@ header .head .sub-admin .dropdown {
   position: absolute;
   display: none;
   right: 0;
-  top: 60px;
+  top: 40px;
   z-index: -1;
   background-color: #f5f5f5;
   -webkit-box-shadow: 0 1px 15px 1px #00000040;
@@ -442,7 +450,7 @@ header .head .sub-admin .dropdown {
 
 header .head .sub-admin .dropdown .item {
   display: block;
-  padding: 10px 75px;
+  padding: 10px 56px;
   border-bottom: 3px solid #f5f5f5;
   text-decoration: none;
   color: #707070;
@@ -641,7 +649,7 @@ header .body .search-box i {
 .content {
   position: absolute;
   left: 200px;
-  top: 60px;
+  top: 40px;
   right: 0;
   bottom: 0;
 }
@@ -777,10 +785,12 @@ header .body .search-box i {
   left: 200px;
   padding: 0 20px;
   right: 0;
-  top: 60px;
+  top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   background: linear-gradient(150deg, #1E2671, #C23764);
   -webkit-transition: .5s;
   transition: .5s;
@@ -789,24 +799,29 @@ header .body .search-box i {
           box-shadow: 0px 4px 11px 1px #0000004f;
 }
 
-.content .dashboard .nav-head .item, .content .user .nav-head .item, .content .news .nav-head .item, .content .product .nav-head .item, .content .magazine .nav-head .item {
+.content .dashboard .nav-head .item, .content .dashboard .nav-head .item1, .content .user .nav-head .item, .content .user .nav-head .item1, .content .news .nav-head .item, .content .news .nav-head .item1, .content .product .nav-head .item, .content .product .nav-head .item1, .content .magazine .nav-head .item, .content .magazine .nav-head .item1 {
   position: relative;
   color: #fff;
-  padding: 12px 30px;
+  padding: 5px 0;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  line-height: 1.3;
   cursor: pointer;
 }
 
-.content .dashboard .nav-head .item:hover .line, .content .user .nav-head .item:hover .line, .content .news .nav-head .item:hover .line, .content .product .nav-head .item:hover .line, .content .magazine .nav-head .item:hover .line {
+.content .dashboard .nav-head .item:hover .line, .content .dashboard .nav-head .item1:hover .line, .content .user .nav-head .item:hover .line, .content .user .nav-head .item1:hover .line, .content .news .nav-head .item:hover .line, .content .news .nav-head .item1:hover .line, .content .product .nav-head .item:hover .line, .content .product .nav-head .item1:hover .line, .content .magazine .nav-head .item:hover .line, .content .magazine .nav-head .item1:hover .line {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
 }
 
-.content .dashboard .nav-head .item .line, .content .user .nav-head .item .line, .content .news .nav-head .item .line, .content .product .nav-head .item .line, .content .magazine .nav-head .item .line {
+.content .dashboard .nav-head .item .line, .content .dashboard .nav-head .item1 .line, .content .user .nav-head .item .line, .content .user .nav-head .item1 .line, .content .news .nav-head .item .line, .content .news .nav-head .item1 .line, .content .product .nav-head .item .line, .content .product .nav-head .item1 .line, .content .magazine .nav-head .item .line, .content .magazine .nav-head .item1 .line {
   position: absolute;
-  right: 40px;
+  right: 25px;
   bottom: 0;
-  left: 40px;
-  height: 4px;
+  left: 25px;
+  height: 3px;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   background-color: #fff;
@@ -818,10 +833,17 @@ header .body .search-box i {
           transform: scaleX(1);
 }
 
+.content .dashboard .nav-head .item1, .content .user .nav-head .item1, .content .news .nav-head .item1, .content .product .nav-head .item1, .content .magazine .nav-head .item1 {
+  -webkit-box-flex: unset;
+      -ms-flex-positive: unset;
+          flex-grow: unset;
+  padding: 5px 20px;
+}
+
 .content .dashboard .nav-head .add-music, .content .user .nav-head .add-music, .content .news .nav-head .add-music, .content .product .nav-head .add-music, .content .magazine .nav-head .add-music {
   position: absolute;
   right: 20px;
-  padding: 12px 30px;
+  padding: 14px 30px;
   color: #fff;
   cursor: pointer;
 }
@@ -832,6 +854,7 @@ header .body .search-box i {
 
 .content .dashboard .filter form .form-group, .content .user .filter form .form-group, .content .news .filter form .form-group, .content .product .filter form .form-group, .content .magazine .filter form .form-group {
   position: relative;
+  margin-bottom: 0;
 }
 
 .content .dashboard .filter form .form-group .icon, .content .user .filter form .form-group .icon, .content .news .filter form .form-group .icon, .content .product .filter form .form-group .icon, .content .magazine .filter form .form-group .icon {
@@ -871,24 +894,26 @@ header .body .search-box i {
 
 .content .dashboard .filter form .form-group .btn, .content .user .filter form .form-group .btn, .content .news .filter form .form-group .btn, .content .product .filter form .form-group .btn, .content .magazine .filter form .form-group .btn {
   width: 100%;
-  padding: 6px !important;
+  padding: 5px !important;
 }
 
-.content .dashboard .count .box, .content .user .count .box, .content .news .count .box, .content .product .count .box, .content .magazine .count .box {
+.content .dashboard .filter .box, .content .user .filter .box, .content .news .filter .box, .content .product .filter .box, .content .magazine .filter .box {
   background-color: #fff;
   display: inline-block;
+  width: 100%;
+  text-align: center;
   border-radius: 5px;
-  padding: 5px 30px;
+  padding: 5px;
   -webkit-box-shadow: 0 0 5px 0 #00000040;
           box-shadow: 0 0 5px 0 #00000040;
 }
 
-.content .dashboard .count .box .count-heading, .content .user .count .box .count-heading, .content .news .count .box .count-heading, .content .product .count .box .count-heading, .content .magazine .count .box .count-heading {
+.content .dashboard .filter .box .count-heading, .content .user .filter .box .count-heading, .content .news .filter .box .count-heading, .content .product .filter .box .count-heading, .content .magazine .filter .box .count-heading {
   color: #707070;
   font-weight: 600;
 }
 
-.content .dashboard .count .box .count-content, .content .user .count .box .count-content, .content .news .count .box .count-content, .content .product .count .box .count-content, .content .magazine .count .box .count-content {
+.content .dashboard .filter .box .count-content, .content .user .filter .box .count-content, .content .news .filter .box .count-content, .content .product .filter .box .count-content, .content .magazine .filter .box .count-content {
   margin-left: 8px;
   font-size: 18px;
   color: #333333;
@@ -909,7 +934,7 @@ header .body .search-box i {
 
 .content .dashboard .user-list .card .crown, .content .dashboard .post-list .card .crown, .content .dashboard .music-list .card .crown, .content .user .user-list .card .crown, .content .user .post-list .card .crown, .content .user .music-list .card .crown, .content .news .user-list .card .crown, .content .news .post-list .card .crown, .content .news .music-list .card .crown, .content .product .user-list .card .crown, .content .product .post-list .card .crown, .content .product .music-list .card .crown, .content .magazine .user-list .card .crown, .content .magazine .post-list .card .crown, .content .magazine .music-list .card .crown {
   position: absolute;
-  top: 5px;
+  top: 2px;
   left: 10px;
 }
 
@@ -922,7 +947,7 @@ header .body .search-box i {
   height: 120px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 10px auto 0px auto;
+  margin: 25px auto 0px auto;
   -webkit-box-shadow: 0px 1px 8px 0px #0000008a;
           box-shadow: 0px 1px 8px 0px #0000008a;
 }
@@ -931,8 +956,33 @@ header .body .search-box i {
   width: 100%;
 }
 
+.content .dashboard .user-list .card .reward, .content .dashboard .post-list .card .reward, .content .dashboard .music-list .card .reward, .content .user .user-list .card .reward, .content .user .post-list .card .reward, .content .user .music-list .card .reward, .content .news .user-list .card .reward, .content .news .post-list .card .reward, .content .news .music-list .card .reward, .content .product .user-list .card .reward, .content .product .post-list .card .reward, .content .product .music-list .card .reward, .content .magazine .user-list .card .reward, .content .magazine .post-list .card .reward, .content .magazine .music-list .card .reward {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+}
+
+.content .dashboard .user-list .card .reward .coin, .content .dashboard .user-list .card .reward .video, .content .dashboard .post-list .card .reward .coin, .content .dashboard .post-list .card .reward .video, .content .dashboard .music-list .card .reward .coin, .content .dashboard .music-list .card .reward .video, .content .user .user-list .card .reward .coin, .content .user .user-list .card .reward .video, .content .user .post-list .card .reward .coin, .content .user .post-list .card .reward .video, .content .user .music-list .card .reward .coin, .content .user .music-list .card .reward .video, .content .news .user-list .card .reward .coin, .content .news .user-list .card .reward .video, .content .news .post-list .card .reward .coin, .content .news .post-list .card .reward .video, .content .news .music-list .card .reward .coin, .content .news .music-list .card .reward .video, .content .product .user-list .card .reward .coin, .content .product .user-list .card .reward .video, .content .product .post-list .card .reward .coin, .content .product .post-list .card .reward .video, .content .product .music-list .card .reward .coin, .content .product .music-list .card .reward .video, .content .magazine .user-list .card .reward .coin, .content .magazine .user-list .card .reward .video, .content .magazine .post-list .card .reward .coin, .content .magazine .post-list .card .reward .video, .content .magazine .music-list .card .reward .coin, .content .magazine .music-list .card .reward .video {
+  margin-bottom: -5px;
+}
+
+.content .dashboard .user-list .card .reward .coin i, .content .dashboard .user-list .card .reward .video i, .content .dashboard .post-list .card .reward .coin i, .content .dashboard .post-list .card .reward .video i, .content .dashboard .music-list .card .reward .coin i, .content .dashboard .music-list .card .reward .video i, .content .user .user-list .card .reward .coin i, .content .user .user-list .card .reward .video i, .content .user .post-list .card .reward .coin i, .content .user .post-list .card .reward .video i, .content .user .music-list .card .reward .coin i, .content .user .music-list .card .reward .video i, .content .news .user-list .card .reward .coin i, .content .news .user-list .card .reward .video i, .content .news .post-list .card .reward .coin i, .content .news .post-list .card .reward .video i, .content .news .music-list .card .reward .coin i, .content .news .music-list .card .reward .video i, .content .product .user-list .card .reward .coin i, .content .product .user-list .card .reward .video i, .content .product .post-list .card .reward .coin i, .content .product .post-list .card .reward .video i, .content .product .music-list .card .reward .coin i, .content .product .music-list .card .reward .video i, .content .magazine .user-list .card .reward .coin i, .content .magazine .user-list .card .reward .video i, .content .magazine .post-list .card .reward .coin i, .content .magazine .post-list .card .reward .video i, .content .magazine .music-list .card .reward .coin i, .content .magazine .music-list .card .reward .video i {
+  font-size: 12px;
+  color: #C23764;
+}
+
+.content .dashboard .user-list .card .reward .coin img, .content .dashboard .user-list .card .reward .video img, .content .dashboard .post-list .card .reward .coin img, .content .dashboard .post-list .card .reward .video img, .content .dashboard .music-list .card .reward .coin img, .content .dashboard .music-list .card .reward .video img, .content .user .user-list .card .reward .coin img, .content .user .user-list .card .reward .video img, .content .user .post-list .card .reward .coin img, .content .user .post-list .card .reward .video img, .content .user .music-list .card .reward .coin img, .content .user .music-list .card .reward .video img, .content .news .user-list .card .reward .coin img, .content .news .user-list .card .reward .video img, .content .news .post-list .card .reward .coin img, .content .news .post-list .card .reward .video img, .content .news .music-list .card .reward .coin img, .content .news .music-list .card .reward .video img, .content .product .user-list .card .reward .coin img, .content .product .user-list .card .reward .video img, .content .product .post-list .card .reward .coin img, .content .product .post-list .card .reward .video img, .content .product .music-list .card .reward .coin img, .content .product .music-list .card .reward .video img, .content .magazine .user-list .card .reward .coin img, .content .magazine .user-list .card .reward .video img, .content .magazine .post-list .card .reward .coin img, .content .magazine .post-list .card .reward .video img, .content .magazine .music-list .card .reward .coin img, .content .magazine .music-list .card .reward .video img {
+  width: 15px;
+}
+
+.content .dashboard .user-list .card .reward .coin span, .content .dashboard .user-list .card .reward .video span, .content .dashboard .post-list .card .reward .coin span, .content .dashboard .post-list .card .reward .video span, .content .dashboard .music-list .card .reward .coin span, .content .dashboard .music-list .card .reward .video span, .content .user .user-list .card .reward .coin span, .content .user .user-list .card .reward .video span, .content .user .post-list .card .reward .coin span, .content .user .post-list .card .reward .video span, .content .user .music-list .card .reward .coin span, .content .user .music-list .card .reward .video span, .content .news .user-list .card .reward .coin span, .content .news .user-list .card .reward .video span, .content .news .post-list .card .reward .coin span, .content .news .post-list .card .reward .video span, .content .news .music-list .card .reward .coin span, .content .news .music-list .card .reward .video span, .content .product .user-list .card .reward .coin span, .content .product .user-list .card .reward .video span, .content .product .post-list .card .reward .coin span, .content .product .post-list .card .reward .video span, .content .product .music-list .card .reward .coin span, .content .product .music-list .card .reward .video span, .content .magazine .user-list .card .reward .coin span, .content .magazine .user-list .card .reward .video span, .content .magazine .post-list .card .reward .coin span, .content .magazine .post-list .card .reward .video span, .content .magazine .music-list .card .reward .coin span, .content .magazine .music-list .card .reward .video span {
+  font-size: 12px;
+  margin-left: 2px;
+  font-weight: 600;
+}
+
 .content .dashboard .user-list .card .user-info, .content .dashboard .post-list .card .user-info, .content .dashboard .music-list .card .user-info, .content .user .user-list .card .user-info, .content .user .post-list .card .user-info, .content .user .music-list .card .user-info, .content .news .user-list .card .user-info, .content .news .post-list .card .user-info, .content .news .music-list .card .user-info, .content .product .user-list .card .user-info, .content .product .post-list .card .user-info, .content .product .music-list .card .user-info, .content .magazine .user-list .card .user-info, .content .magazine .post-list .card .user-info, .content .magazine .music-list .card .user-info {
-  padding: 8px 0 0 0;
+  padding: 2px 0 0 0;
   display: -ms-grid;
   display: grid;
 }
@@ -994,45 +1044,83 @@ header .body .search-box i {
   border-radius: 0;
 }
 
-.content .dashboard .user-list .post, .content .dashboard .post-list .post, .content .dashboard .music-list .post, .content .user .user-list .post, .content .user .post-list .post, .content .user .music-list .post, .content .news .user-list .post, .content .news .post-list .post, .content .news .music-list .post, .content .product .user-list .post, .content .product .post-list .post, .content .product .music-list .post, .content .magazine .user-list .post, .content .magazine .post-list .post, .content .magazine .music-list .post {
+.content .dashboard .user-list .card .post, .content .dashboard .post-list .card .post, .content .dashboard .music-list .card .post, .content .user .user-list .card .post, .content .user .post-list .card .post, .content .user .music-list .card .post, .content .news .user-list .card .post, .content .news .post-list .card .post, .content .news .music-list .card .post, .content .product .user-list .card .post, .content .product .post-list .card .post, .content .product .music-list .card .post, .content .magazine .user-list .card .post, .content .magazine .post-list .card .post, .content .magazine .music-list .card .post {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 300px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 177px auto;
+      grid-template-columns: 177px auto;
+  height: 315px;
   background-color: #222;
 }
 
-.content .dashboard .user-list .post .detail-icon, .content .dashboard .post-list .post .detail-icon, .content .dashboard .music-list .post .detail-icon, .content .user .user-list .post .detail-icon, .content .user .post-list .post .detail-icon, .content .user .music-list .post .detail-icon, .content .news .user-list .post .detail-icon, .content .news .post-list .post .detail-icon, .content .news .music-list .post .detail-icon, .content .product .user-list .post .detail-icon, .content .product .post-list .post .detail-icon, .content .product .music-list .post .detail-icon, .content .magazine .user-list .post .detail-icon, .content .magazine .post-list .post .detail-icon, .content .magazine .music-list .post .detail-icon {
+.content .dashboard .user-list .card .post .detail-icon, .content .dashboard .post-list .card .post .detail-icon, .content .dashboard .music-list .card .post .detail-icon, .content .user .user-list .card .post .detail-icon, .content .user .post-list .card .post .detail-icon, .content .user .music-list .card .post .detail-icon, .content .news .user-list .card .post .detail-icon, .content .news .post-list .card .post .detail-icon, .content .news .music-list .card .post .detail-icon, .content .product .user-list .card .post .detail-icon, .content .product .post-list .card .post .detail-icon, .content .product .music-list .card .post .detail-icon, .content .magazine .user-list .card .post .detail-icon, .content .magazine .post-list .card .post .detail-icon, .content .magazine .music-list .card .post .detail-icon {
   position: absolute;
   right: 10px;
-  top: 6px;
-  color: #ffffff;
+  top: 2px;
+  color: #000;
   font-size: 20px;
-  z-index: 1;
+  z-index: 3;
 }
 
-.content .dashboard .user-list .post video, .content .dashboard .post-list .post video, .content .dashboard .music-list .post video, .content .user .user-list .post video, .content .user .post-list .post video, .content .user .music-list .post video, .content .news .user-list .post video, .content .news .post-list .post video, .content .news .music-list .post video, .content .product .user-list .post video, .content .product .post-list .post video, .content .product .music-list .post video, .content .magazine .user-list .post video, .content .magazine .post-list .post video, .content .magazine .music-list .post video {
-  margin: auto;
-  width: 100%;
-  max-height: 300px;
+.content .dashboard .user-list .card .post video, .content .dashboard .post-list .card .post video, .content .dashboard .music-list .card .post video, .content .user .user-list .card .post video, .content .user .post-list .card .post video, .content .user .music-list .card .post video, .content .news .user-list .card .post video, .content .news .post-list .card .post video, .content .news .music-list .card .post video, .content .product .user-list .card .post video, .content .product .post-list .card .post video, .content .product .music-list .card .post video, .content .magazine .user-list .card .post video, .content .magazine .post-list .card .post video, .content .magazine .music-list .card .post video {
+  max-height: 315px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
-.content .dashboard .user-list .post .post-info, .content .dashboard .post-list .post .post-info, .content .dashboard .music-list .post .post-info, .content .user .user-list .post .post-info, .content .user .post-list .post .post-info, .content .user .music-list .post .post-info, .content .news .user-list .post .post-info, .content .news .post-list .post .post-info, .content .news .music-list .post .post-info, .content .product .user-list .post .post-info, .content .product .post-list .post .post-info, .content .product .music-list .post .post-info, .content .magazine .user-list .post .post-info, .content .magazine .post-list .post .post-info, .content .magazine .music-list .post .post-info {
-  position: absolute;
+.content .dashboard .user-list .card .post .post-basic-info, .content .dashboard .post-list .card .post .post-basic-info, .content .dashboard .music-list .card .post .post-basic-info, .content .user .user-list .card .post .post-basic-info, .content .user .post-list .card .post .post-basic-info, .content .user .music-list .card .post .post-basic-info, .content .news .user-list .card .post .post-basic-info, .content .news .post-list .card .post .post-basic-info, .content .news .music-list .card .post .post-basic-info, .content .product .user-list .card .post .post-basic-info, .content .product .post-list .card .post .post-basic-info, .content .product .music-list .card .post .post-basic-info, .content .magazine .user-list .card .post .post-basic-info, .content .magazine .post-list .card .post .post-basic-info, .content .magazine .music-list .card .post .post-basic-info {
+  position: relative;
   display: -ms-grid;
   display: grid;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   background-color: #fff;
-  -webkit-transform: scale(0);
-          transform: scale(0);
   z-index: 2;
 }
 
-.content .dashboard .user-list .post .post-info .close, .content .dashboard .post-list .post .post-info .close, .content .dashboard .music-list .post .post-info .close, .content .user .user-list .post .post-info .close, .content .user .post-list .post .post-info .close, .content .user .music-list .post .post-info .close, .content .news .user-list .post .post-info .close, .content .news .post-list .post .post-info .close, .content .news .music-list .post .post-info .close, .content .product .user-list .post .post-info .close, .content .product .post-list .post .post-info .close, .content .product .music-list .post .post-info .close, .content .magazine .user-list .post .post-info .close, .content .magazine .post-list .post .post-info .close, .content .magazine .music-list .post .post-info .close {
+.content .dashboard .user-list .card .post .post-basic-info .info-box, .content .dashboard .post-list .card .post .post-basic-info .info-box, .content .dashboard .music-list .card .post .post-basic-info .info-box, .content .user .user-list .card .post .post-basic-info .info-box, .content .user .post-list .card .post .post-basic-info .info-box, .content .user .music-list .card .post .post-basic-info .info-box, .content .news .user-list .card .post .post-basic-info .info-box, .content .news .post-list .card .post .post-basic-info .info-box, .content .news .music-list .card .post .post-basic-info .info-box, .content .product .user-list .card .post .post-basic-info .info-box, .content .product .post-list .card .post .post-basic-info .info-box, .content .product .music-list .card .post .post-basic-info .info-box, .content .magazine .user-list .card .post .post-basic-info .info-box, .content .magazine .post-list .card .post .post-basic-info .info-box, .content .magazine .music-list .card .post .post-basic-info .info-box {
+  padding: 15px 5px;
+}
+
+.content .dashboard .user-list .card .post .post-basic-info .info-box .info, .content .dashboard .post-list .card .post .post-basic-info .info-box .info, .content .dashboard .music-list .card .post .post-basic-info .info-box .info, .content .user .user-list .card .post .post-basic-info .info-box .info, .content .user .post-list .card .post .post-basic-info .info-box .info, .content .user .music-list .card .post .post-basic-info .info-box .info, .content .news .user-list .card .post .post-basic-info .info-box .info, .content .news .post-list .card .post .post-basic-info .info-box .info, .content .news .music-list .card .post .post-basic-info .info-box .info, .content .product .user-list .card .post .post-basic-info .info-box .info, .content .product .post-list .card .post .post-basic-info .info-box .info, .content .product .music-list .card .post .post-basic-info .info-box .info, .content .magazine .user-list .card .post .post-basic-info .info-box .info, .content .magazine .post-list .card .post .post-basic-info .info-box .info, .content .magazine .music-list .card .post .post-basic-info .info-box .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+}
+
+.content .dashboard .user-list .card .post .post-basic-info .info-box .info .info-heading, .content .dashboard .post-list .card .post .post-basic-info .info-box .info .info-heading, .content .dashboard .music-list .card .post .post-basic-info .info-box .info .info-heading, .content .user .user-list .card .post .post-basic-info .info-box .info .info-heading, .content .user .post-list .card .post .post-basic-info .info-box .info .info-heading, .content .user .music-list .card .post .post-basic-info .info-box .info .info-heading, .content .news .user-list .card .post .post-basic-info .info-box .info .info-heading, .content .news .post-list .card .post .post-basic-info .info-box .info .info-heading, .content .news .music-list .card .post .post-basic-info .info-box .info .info-heading, .content .product .user-list .card .post .post-basic-info .info-box .info .info-heading, .content .product .post-list .card .post .post-basic-info .info-box .info .info-heading, .content .product .music-list .card .post .post-basic-info .info-box .info .info-heading, .content .magazine .user-list .card .post .post-basic-info .info-box .info .info-heading, .content .magazine .post-list .card .post .post-basic-info .info-box .info .info-heading, .content .magazine .music-list .card .post .post-basic-info .info-box .info .info-heading {
+  color: #000;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.content .dashboard .user-list .card .post .post-basic-info .info-box .info .info-content, .content .dashboard .post-list .card .post .post-basic-info .info-box .info .info-content, .content .dashboard .music-list .card .post .post-basic-info .info-box .info .info-content, .content .user .user-list .card .post .post-basic-info .info-box .info .info-content, .content .user .post-list .card .post .post-basic-info .info-box .info .info-content, .content .user .music-list .card .post .post-basic-info .info-box .info .info-content, .content .news .user-list .card .post .post-basic-info .info-box .info .info-content, .content .news .post-list .card .post .post-basic-info .info-box .info .info-content, .content .news .music-list .card .post .post-basic-info .info-box .info .info-content, .content .product .user-list .card .post .post-basic-info .info-box .info .info-content, .content .product .post-list .card .post .post-basic-info .info-box .info .info-content, .content .product .music-list .card .post .post-basic-info .info-box .info .info-content, .content .magazine .user-list .card .post .post-basic-info .info-box .info .info-content, .content .magazine .post-list .card .post .post-basic-info .info-box .info .info-content, .content .magazine .music-list .card .post .post-basic-info .info-box .info .info-content {
+  color: #707070;
+}
+
+.content .dashboard .user-list .card .post .post-info, .content .dashboard .post-list .card .post .post-info, .content .dashboard .music-list .card .post .post-info, .content .user .user-list .card .post .post-info, .content .user .post-list .card .post .post-info, .content .user .music-list .card .post .post-info, .content .news .user-list .card .post .post-info, .content .news .post-list .card .post .post-info, .content .news .music-list .card .post .post-info, .content .product .user-list .card .post .post-info, .content .product .post-list .card .post .post-info, .content .product .music-list .card .post .post-info, .content .magazine .user-list .card .post .post-info, .content .magazine .post-list .card .post .post-info, .content .magazine .music-list .card .post .post-info {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  background-color: #fff;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.content .dashboard .user-list .card .post .post-info .close, .content .dashboard .post-list .card .post .post-info .close, .content .dashboard .music-list .card .post .post-info .close, .content .user .user-list .card .post .post-info .close, .content .user .post-list .card .post .post-info .close, .content .user .music-list .card .post .post-info .close, .content .news .user-list .card .post .post-info .close, .content .news .post-list .card .post .post-info .close, .content .news .music-list .card .post .post-info .close, .content .product .user-list .card .post .post-info .close, .content .product .post-list .card .post .post-info .close, .content .product .music-list .card .post .post-info .close, .content .magazine .user-list .card .post .post-info .close, .content .magazine .post-list .card .post .post-info .close, .content .magazine .music-list .card .post .post-info .close {
   position: absolute;
   right: 6px;
   top: 3px;
@@ -1041,56 +1129,52 @@ header .body .search-box i {
   z-index: 5;
 }
 
-.content .dashboard .user-list .post .post-info .info-box, .content .dashboard .post-list .post .post-info .info-box, .content .dashboard .music-list .post .post-info .info-box, .content .user .user-list .post .post-info .info-box, .content .user .post-list .post .post-info .info-box, .content .user .music-list .post .post-info .info-box, .content .news .user-list .post .post-info .info-box, .content .news .post-list .post .post-info .info-box, .content .news .music-list .post .post-info .info-box, .content .product .user-list .post .post-info .info-box, .content .product .post-list .post .post-info .info-box, .content .product .music-list .post .post-info .info-box, .content .magazine .user-list .post .post-info .info-box, .content .magazine .post-list .post .post-info .info-box, .content .magazine .music-list .post .post-info .info-box {
-  padding: 12px 15px 22px 15px;
+.content .dashboard .user-list .card .post .post-info .info-box, .content .dashboard .post-list .card .post .post-info .info-box, .content .dashboard .music-list .card .post .post-info .info-box, .content .user .user-list .card .post .post-info .info-box, .content .user .post-list .card .post .post-info .info-box, .content .user .music-list .card .post .post-info .info-box, .content .news .user-list .card .post .post-info .info-box, .content .news .post-list .card .post .post-info .info-box, .content .news .music-list .card .post .post-info .info-box, .content .product .user-list .card .post .post-info .info-box, .content .product .post-list .card .post .post-info .info-box, .content .product .music-list .card .post .post-info .info-box, .content .magazine .user-list .card .post .post-info .info-box, .content .magazine .post-list .card .post .post-info .info-box, .content .magazine .music-list .card .post .post-info .info-box {
+  padding: 20px 15px;
   overflow: scroll;
 }
 
-.content .dashboard .user-list .post .post-info .info-box::-webkit-scrollbar, .content .dashboard .post-list .post .post-info .info-box::-webkit-scrollbar, .content .dashboard .music-list .post .post-info .info-box::-webkit-scrollbar, .content .user .user-list .post .post-info .info-box::-webkit-scrollbar, .content .user .post-list .post .post-info .info-box::-webkit-scrollbar, .content .user .music-list .post .post-info .info-box::-webkit-scrollbar, .content .news .user-list .post .post-info .info-box::-webkit-scrollbar, .content .news .post-list .post .post-info .info-box::-webkit-scrollbar, .content .news .music-list .post .post-info .info-box::-webkit-scrollbar, .content .product .user-list .post .post-info .info-box::-webkit-scrollbar, .content .product .post-list .post .post-info .info-box::-webkit-scrollbar, .content .product .music-list .post .post-info .info-box::-webkit-scrollbar, .content .magazine .user-list .post .post-info .info-box::-webkit-scrollbar, .content .magazine .post-list .post .post-info .info-box::-webkit-scrollbar, .content .magazine .music-list .post .post-info .info-box::-webkit-scrollbar {
+.content .dashboard .user-list .card .post .post-info .info-box::-webkit-scrollbar, .content .dashboard .post-list .card .post .post-info .info-box::-webkit-scrollbar, .content .dashboard .music-list .card .post .post-info .info-box::-webkit-scrollbar, .content .user .user-list .card .post .post-info .info-box::-webkit-scrollbar, .content .user .post-list .card .post .post-info .info-box::-webkit-scrollbar, .content .user .music-list .card .post .post-info .info-box::-webkit-scrollbar, .content .news .user-list .card .post .post-info .info-box::-webkit-scrollbar, .content .news .post-list .card .post .post-info .info-box::-webkit-scrollbar, .content .news .music-list .card .post .post-info .info-box::-webkit-scrollbar, .content .product .user-list .card .post .post-info .info-box::-webkit-scrollbar, .content .product .post-list .card .post .post-info .info-box::-webkit-scrollbar, .content .product .music-list .card .post .post-info .info-box::-webkit-scrollbar, .content .magazine .user-list .card .post .post-info .info-box::-webkit-scrollbar, .content .magazine .post-list .card .post .post-info .info-box::-webkit-scrollbar, .content .magazine .music-list .card .post .post-info .info-box::-webkit-scrollbar {
   width: 3px;
 }
 
-.content .dashboard .user-list .post .post-info .info-box::-webkit-scrollbar-track, .content .dashboard .post-list .post .post-info .info-box::-webkit-scrollbar-track, .content .dashboard .music-list .post .post-info .info-box::-webkit-scrollbar-track, .content .user .user-list .post .post-info .info-box::-webkit-scrollbar-track, .content .user .post-list .post .post-info .info-box::-webkit-scrollbar-track, .content .user .music-list .post .post-info .info-box::-webkit-scrollbar-track, .content .news .user-list .post .post-info .info-box::-webkit-scrollbar-track, .content .news .post-list .post .post-info .info-box::-webkit-scrollbar-track, .content .news .music-list .post .post-info .info-box::-webkit-scrollbar-track, .content .product .user-list .post .post-info .info-box::-webkit-scrollbar-track, .content .product .post-list .post .post-info .info-box::-webkit-scrollbar-track, .content .product .music-list .post .post-info .info-box::-webkit-scrollbar-track, .content .magazine .user-list .post .post-info .info-box::-webkit-scrollbar-track, .content .magazine .post-list .post .post-info .info-box::-webkit-scrollbar-track, .content .magazine .music-list .post .post-info .info-box::-webkit-scrollbar-track {
+.content .dashboard .user-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .dashboard .post-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .dashboard .music-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .user .user-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .user .post-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .user .music-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .news .user-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .news .post-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .news .music-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .product .user-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .product .post-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .product .music-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .magazine .user-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .magazine .post-list .card .post .post-info .info-box::-webkit-scrollbar-track, .content .magazine .music-list .card .post .post-info .info-box::-webkit-scrollbar-track {
   background: #fff;
 }
 
-.content .dashboard .user-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .dashboard .post-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .dashboard .music-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .user .user-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .user .post-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .user .music-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .news .user-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .news .post-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .news .music-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .product .user-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .product .post-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .product .music-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .magazine .user-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .magazine .post-list .post .post-info .info-box::-webkit-scrollbar-thumb, .content .magazine .music-list .post .post-info .info-box::-webkit-scrollbar-thumb {
+.content .dashboard .user-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .dashboard .post-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .dashboard .music-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .user .user-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .user .post-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .user .music-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .news .user-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .news .post-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .news .music-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .product .user-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .product .post-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .product .music-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .magazine .user-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .magazine .post-list .card .post .post-info .info-box::-webkit-scrollbar-thumb, .content .magazine .music-list .card .post .post-info .info-box::-webkit-scrollbar-thumb {
   background: #aaa;
 }
 
-.content .dashboard .user-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .dashboard .post-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .dashboard .music-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .user .user-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .user .post-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .user .music-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .news .user-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .news .post-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .news .music-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .product .user-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .product .post-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .product .music-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .magazine .user-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .magazine .post-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .magazine .music-list .post .post-info .info-box::-webkit-scrollbar-thumb:hover {
+.content .dashboard .user-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .dashboard .post-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .dashboard .music-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .user .user-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .user .post-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .user .music-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .news .user-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .news .post-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .news .music-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .product .user-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .product .post-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .product .music-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .magazine .user-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .magazine .post-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover, .content .magazine .music-list .card .post .post-info .info-box::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-.content .dashboard .user-list .post .post-info .info-box .info, .content .dashboard .post-list .post .post-info .info-box .info, .content .dashboard .music-list .post .post-info .info-box .info, .content .user .user-list .post .post-info .info-box .info, .content .user .post-list .post .post-info .info-box .info, .content .user .music-list .post .post-info .info-box .info, .content .news .user-list .post .post-info .info-box .info, .content .news .post-list .post .post-info .info-box .info, .content .news .music-list .post .post-info .info-box .info, .content .product .user-list .post .post-info .info-box .info, .content .product .post-list .post .post-info .info-box .info, .content .product .music-list .post .post-info .info-box .info, .content .magazine .user-list .post .post-info .info-box .info, .content .magazine .post-list .post .post-info .info-box .info, .content .magazine .music-list .post .post-info .info-box .info {
+.content .dashboard .user-list .card .post .post-info .info-box .info, .content .dashboard .post-list .card .post .post-info .info-box .info, .content .dashboard .music-list .card .post .post-info .info-box .info, .content .user .user-list .card .post .post-info .info-box .info, .content .user .post-list .card .post .post-info .info-box .info, .content .user .music-list .card .post .post-info .info-box .info, .content .news .user-list .card .post .post-info .info-box .info, .content .news .post-list .card .post .post-info .info-box .info, .content .news .music-list .card .post .post-info .info-box .info, .content .product .user-list .card .post .post-info .info-box .info, .content .product .post-list .card .post .post-info .info-box .info, .content .product .music-list .card .post .post-info .info-box .info, .content .magazine .user-list .card .post .post-info .info-box .info, .content .magazine .post-list .card .post .post-info .info-box .info, .content .magazine .music-list .card .post .post-info .info-box .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-size: 14px;
 }
 
-.content .dashboard .user-list .post .post-info .info-box .info .info-heading, .content .dashboard .post-list .post .post-info .info-box .info .info-heading, .content .dashboard .music-list .post .post-info .info-box .info .info-heading, .content .user .user-list .post .post-info .info-box .info .info-heading, .content .user .post-list .post .post-info .info-box .info .info-heading, .content .user .music-list .post .post-info .info-box .info .info-heading, .content .news .user-list .post .post-info .info-box .info .info-heading, .content .news .post-list .post .post-info .info-box .info .info-heading, .content .news .music-list .post .post-info .info-box .info .info-heading, .content .product .user-list .post .post-info .info-box .info .info-heading, .content .product .post-list .post .post-info .info-box .info .info-heading, .content .product .music-list .post .post-info .info-box .info .info-heading, .content .magazine .user-list .post .post-info .info-box .info .info-heading, .content .magazine .post-list .post .post-info .info-box .info .info-heading, .content .magazine .music-list .post .post-info .info-box .info .info-heading {
+.content .dashboard .user-list .card .post .post-info .info-box .info .info-heading, .content .dashboard .post-list .card .post .post-info .info-box .info .info-heading, .content .dashboard .music-list .card .post .post-info .info-box .info .info-heading, .content .user .user-list .card .post .post-info .info-box .info .info-heading, .content .user .post-list .card .post .post-info .info-box .info .info-heading, .content .user .music-list .card .post .post-info .info-box .info .info-heading, .content .news .user-list .card .post .post-info .info-box .info .info-heading, .content .news .post-list .card .post .post-info .info-box .info .info-heading, .content .news .music-list .card .post .post-info .info-box .info .info-heading, .content .product .user-list .card .post .post-info .info-box .info .info-heading, .content .product .post-list .card .post .post-info .info-box .info .info-heading, .content .product .music-list .card .post .post-info .info-box .info .info-heading, .content .magazine .user-list .card .post .post-info .info-box .info .info-heading, .content .magazine .post-list .card .post .post-info .info-box .info .info-heading, .content .magazine .music-list .card .post .post-info .info-box .info .info-heading {
   color: #000;
-  margin-right: 10px;
+  margin-right: 5px;
   font-weight: bold;
 }
 
-.content .dashboard .user-list .post .post-info .info-box .info .info-content, .content .dashboard .post-list .post .post-info .info-box .info .info-content, .content .dashboard .music-list .post .post-info .info-box .info .info-content, .content .user .user-list .post .post-info .info-box .info .info-content, .content .user .post-list .post .post-info .info-box .info .info-content, .content .user .music-list .post .post-info .info-box .info .info-content, .content .news .user-list .post .post-info .info-box .info .info-content, .content .news .post-list .post .post-info .info-box .info .info-content, .content .news .music-list .post .post-info .info-box .info .info-content, .content .product .user-list .post .post-info .info-box .info .info-content, .content .product .post-list .post .post-info .info-box .info .info-content, .content .product .music-list .post .post-info .info-box .info .info-content, .content .magazine .user-list .post .post-info .info-box .info .info-content, .content .magazine .post-list .post .post-info .info-box .info .info-content, .content .magazine .music-list .post .post-info .info-box .info .info-content {
+.content .dashboard .user-list .card .post .post-info .info-box .info .info-content, .content .dashboard .post-list .card .post .post-info .info-box .info .info-content, .content .dashboard .music-list .card .post .post-info .info-box .info .info-content, .content .user .user-list .card .post .post-info .info-box .info .info-content, .content .user .post-list .card .post .post-info .info-box .info .info-content, .content .user .music-list .card .post .post-info .info-box .info .info-content, .content .news .user-list .card .post .post-info .info-box .info .info-content, .content .news .post-list .card .post .post-info .info-box .info .info-content, .content .news .music-list .card .post .post-info .info-box .info .info-content, .content .product .user-list .card .post .post-info .info-box .info .info-content, .content .product .post-list .card .post .post-info .info-box .info .info-content, .content .product .music-list .card .post .post-info .info-box .info .info-content, .content .magazine .user-list .card .post .post-info .info-box .info .info-content, .content .magazine .post-list .card .post .post-info .info-box .info .info-content, .content .magazine .music-list .card .post .post-info .info-box .info .info-content {
   color: #707070;
 }
 
-.content .dashboard .user-list .post .post-info .button-box, .content .dashboard .post-list .post .post-info .button-box, .content .dashboard .music-list .post .post-info .button-box, .content .user .user-list .post .post-info .button-box, .content .user .post-list .post .post-info .button-box, .content .user .music-list .post .post-info .button-box, .content .news .user-list .post .post-info .button-box, .content .news .post-list .post .post-info .button-box, .content .news .music-list .post .post-info .button-box, .content .product .user-list .post .post-info .button-box, .content .product .post-list .post .post-info .button-box, .content .product .music-list .post .post-info .button-box, .content .magazine .user-list .post .post-info .button-box, .content .magazine .post-list .post .post-info .button-box, .content .magazine .music-list .post .post-info .button-box {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
+.content .dashboard .user-list .card .button-box, .content .dashboard .post-list .card .button-box, .content .dashboard .music-list .card .button-box, .content .user .user-list .card .button-box, .content .user .post-list .card .button-box, .content .user .music-list .card .button-box, .content .news .user-list .card .button-box, .content .news .post-list .card .button-box, .content .news .music-list .card .button-box, .content .product .user-list .card .button-box, .content .product .post-list .card .button-box, .content .product .music-list .card .button-box, .content .magazine .user-list .card .button-box, .content .magazine .post-list .card .button-box, .content .magazine .music-list .card .button-box {
+  position: relative;
 }
 
-.content .dashboard .user-list .post .post-info .button-box .btn, .content .dashboard .post-list .post .post-info .button-box .btn, .content .dashboard .music-list .post .post-info .button-box .btn, .content .user .user-list .post .post-info .button-box .btn, .content .user .post-list .post .post-info .button-box .btn, .content .user .music-list .post .post-info .button-box .btn, .content .news .user-list .post .post-info .button-box .btn, .content .news .post-list .post .post-info .button-box .btn, .content .news .music-list .post .post-info .button-box .btn, .content .product .user-list .post .post-info .button-box .btn, .content .product .post-list .post .post-info .button-box .btn, .content .product .music-list .post .post-info .button-box .btn, .content .magazine .user-list .post .post-info .button-box .btn, .content .magazine .post-list .post .post-info .button-box .btn, .content .magazine .music-list .post .post-info .button-box .btn {
+.content .dashboard .user-list .card .button-box .btn, .content .dashboard .post-list .card .button-box .btn, .content .dashboard .music-list .card .button-box .btn, .content .user .user-list .card .button-box .btn, .content .user .post-list .card .button-box .btn, .content .user .music-list .card .button-box .btn, .content .news .user-list .card .button-box .btn, .content .news .post-list .card .button-box .btn, .content .news .music-list .card .button-box .btn, .content .product .user-list .card .button-box .btn, .content .product .post-list .card .button-box .btn, .content .product .music-list .card .button-box .btn, .content .magazine .user-list .card .button-box .btn, .content .magazine .post-list .card .button-box .btn, .content .magazine .music-list .card .button-box .btn {
   width: 100%;
   border-radius: 0;
-  border: 2px solid #fff;
-  border-radius: 5px;
+  border: 0.8px solid #fff !important;
 }
 
 .content .dashboard .user-list .music, .content .dashboard .post-list .music, .content .dashboard .music-list .music, .content .user .user-list .music, .content .user .post-list .music, .content .user .music-list .music, .content .news .user-list .music, .content .news .post-list .music, .content .news .music-list .music, .content .product .user-list .music, .content .product .post-list .music, .content .product .music-list .music, .content .magazine .user-list .music, .content .magazine .post-list .music, .content .magazine .music-list .music {
@@ -1259,7 +1343,7 @@ header .body .search-box i {
 .content .dashboard .card .card-content, .content .user .card .card-content, .content .news .card .card-content, .content .product .card .card-content, .content .magazine .card .card-content {
   display: -ms-grid;
   display: grid;
-  padding: 10px 14px;
+  padding: 28px 14px;
   margin-bottom: 30px;
 }
 
@@ -1274,12 +1358,12 @@ header .body .search-box i {
 }
 
 .content .dashboard .card .card-content .title strong, .content .user .card .card-content .title strong, .content .news .card .card-content .title strong, .content .product .card .card-content .title strong, .content .magazine .card .card-content .title strong {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .content .dashboard .card .card-content .variable, .content .user .card .card-content .variable, .content .news .card .card-content .variable, .content .product .card .card-content .variable, .content .magazine .card .card-content .variable {
   font-size: 22px;
-  padding: 10px 0;
+  padding: 15px 0;
   color: #737373;
   font-weight: bold;
 }
@@ -1754,11 +1838,11 @@ header .body .search-box i {
     left: -280px;
     z-index: 11;
   }
-  .sidebar .head .logo .btnmenu {
+  .sidebar .head .logo .side-btnmenu {
     position: absolute;
     left: 285px;
     display: block;
-    top: 20px;
+    top: 10px;
     font-size: 20px;
     color: #C23764;
     -webkit-transform: rotate(180deg);
@@ -1798,30 +1882,49 @@ header .body .search-box i {
   .expand-main {
     left: 0px;
   }
-  .expand-main .head .btnmenu {
-    z-index: 10;
-  }
-  .expand-main .head .btnmenu .bars {
-    background-color: #fff;
-  }
-  .expand-main .head .btnmenu .top {
-    -webkit-transform: rotateY(0deg) rotate(-45deg);
-            transform: rotateY(0deg) rotate(-45deg);
-  }
-  .expand-main .head .btnmenu .center {
-    left: 5px;
-  }
-  .expand-main .head .btnmenu .bottom {
-    -webkit-transform: rotateY(0deg) rotate(45deg);
-            transform: rotateY(0deg) rotate(45deg);
-  }
   .variable {
     font-size: 25px !important;
   }
 }
 
+@media (max-width: 720px) {
+  header .head .btnmenu {
+    display: block;
+    margin: auto 0;
+  }
+  header .head .nav {
+    display: none;
+  }
+  .content .user .nav-head {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 40px;
+  }
+  .content .user .nav-head .item {
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 12px 0;
+  }
+  .content .user .nav-head .item:hover {
+    background-color: #ffffff30;
+  }
+  .content .user .nav-head .item div {
+    margin-left: 10px;
+  }
+  .content .user .nav-head .item .line {
+    display: none;
+  }
+  .content .user .header-expand {
+    display: block;
+  }
+}
+
 @media (max-width: 576px) {
-  .sidebar .head .logo .btnmenu {
+  .sidebar .head .logo .side-btnmenu {
     left: 300px;
   }
   .sidebar .head .logo .btnmenuclose {
@@ -1849,7 +1952,7 @@ header .body .search-box i {
     padding: 0px;
   }
   header .head {
-    padding: 0 10px;
+    padding: 0 10px 0 45px;
     -ms-grid-columns: auto 90px 44px;
         grid-template-columns: auto 90px 44px;
   }
@@ -1857,12 +1960,19 @@ header .body .search-box i {
     border-left: none;
   }
   header .head .sub-admin .pic {
+    display: block;
     width: 32px;
     height: 32px;
     margin: auto 6px;
   }
   header .head .sub-admin .sub-admin-detail {
     display: none;
+  }
+  .expand-main {
+    left: 0 !important;
+  }
+  .expand-main .head {
+    padding: 0 10px 0 45px;
   }
   .table tr td, .table tr th {
     display: block;

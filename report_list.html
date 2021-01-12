@@ -24,11 +24,11 @@
                 <div class="title">
                     <strong>Admin</strong>
                 </div>
-                <i class="fas fa-arrow-left btnmenu"></i>
+                <i class="fas fa-arrow-left side-btnmenu"></i>
             </a>
         </div>
         <div class="body">
-            <a href="../" class="active">
+            <a href="../">
                 <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
                 <span class="name">DASHBOARD</span>
             </a>
@@ -36,7 +36,7 @@
                 <span class="icon"><i class="fas fa-user-alt"></i></span>
                 <span class="name">User</span>
             </a>
-            <a href="post.html">
+            <a href="post.html" class="active">
                 <span class="icon"><i class="fas fa-photo-video"></i></span>
                 <span class="name">Post</span>
             </a>
@@ -89,11 +89,11 @@
             <div class="notify">
                 <span class="icon">
                     <i class="fas fa-bell"></i>
-                    <span class="count">45</span>
+                    <span class="count"></span>
                 </span>
                 <span class="icon">
                     <i class="fas fa-comments"></i>
-                    <span class="count">17</span>
+                    <span class="count"></span>
                 </span>
             </div>
             <div class="sub-admin">
@@ -103,7 +103,6 @@
                 <div class="sub-admin-detail">
                     <div class="title">
                         <strong>Ankit</strong>
-                        <small>Portal Administration</small>
                     </div>
                     <i class="fas fa-caret-down"></i>
                 </div>
@@ -122,8 +121,10 @@
                 <div class="add-icon"><i class="fas fa-user-plus"></i></div>
             </div>
             <div class="nav-head">
-                <div class="item active">All <span>Reported Post</span><div class="line"></div></div>
-                <div class="item">Today's <span>Reported Post</span><div class="line"></div></div>
+                <a href="" class="item active">Total <div>12323</div> <div class="line"></div></a>
+                <a href="" class="item">Today <div>12323</div> <div class="line"></div></a>
+                <a href="" class="item active">Total U/Review<div>12323</div> <div class="line"></div></a>
+                <a href="" class="item">Today  U/Review <div>12323</div> <div class="line"></div></a>
             </div>
             <div class="filter">
                 <div class="container">
@@ -131,13 +132,13 @@
                         <div class="col">
                             <form action="">
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-sm-12 col-md-3 col-lg-3 col-xl-4">
                                         <div class="form-group">
                                             <span class="icon"><i class="fas fa-search"></i></span>
                                             <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search by Username and Post Id">
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2 col-xl-2">
                                         <div class="form-group">
                                             <span class="icon-date"><i class="far fa-calendar-alt"></i></span>
                                             <input type="text" name="datefrom" id="datepicker1" width="100%" class="form-control date" placeholder="Date From" />
@@ -149,7 +150,7 @@
                                             </script>
                                         </div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2 col-xl-2">
                                         <div class="form-group">
                                             <span class="icon-date"><i class="far fa-calendar-alt"></i></span>
                                             <input type="text" name="dateto" id="datepicker2" width="100%" class="form-control date" placeholder="Date To" />
@@ -161,9 +162,15 @@
                                             </script>
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-xl-2">
                                         <div class="form-group">
                                             <button class="btn btn-apply-light">Search</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-lg-3 col-xl-2">
+                                        <div class="box">
+                                            <span class="count-heading">Post Count: </span>
+                                            <span class="count-content">124</span>
                                         </div>
                                     </div>
                                 </div>
@@ -172,286 +179,409 @@
                     </div>
                 </div>
             </div>
-            <div class="count">
-                <div class="container">
-                    <div class="row">
-                        <div class="col">
-                            <div class="box">
-                                <span class="count-heading">No. of Reported Post : </span>
-                                <span class="count-content">124</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="user-list">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 top-margin-20">
-                            <div class="card post">
-                                <span class="detail-icon" id="info-open-01"><i class="fas fa-angle-down"></i></span>
-                                <video controls>
-                                    <source src="images/video2.mp4" type="video/mp4">
-                                </video>
-                                <div class="post-info info-open-01">
-                                    <div class="close" id="info-close-01"><i class="fas fa-times"></i></div>
-                                    <div class="info-box">
-                                        <div class="row top-margin-5">
-                                            <div class="col text-center">
-                                                <h5>Reported Post Info</h5>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col-6">
-                                                <div class="info">
-                                                    <div class="info-heading">PostID:</div>
-                                                    <div class="info-content">2023154</div>
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 top-margin-20">
+                            <div class="card">
+                                <div class="post">
+                                    <span class="detail-icon" id="info-open-01"><i class="fas fa-angle-down"></i></span>
+                                    <video controls>
+                                        <source src="video/1.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="post-basic-info">
+                                        <div class="info-box">
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-heading">ID:</div>
+                                                        <div class="info-content">202</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
-                                                <div class="info">
-                                                    <div class="info-heading">UserID:</div>
-                                                    <div class="info-content">20154</div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-content">15-09-2020</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">User Name:</div>
-                                                    <div class="info-content">Ankit Varshney</div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-content ">1.35 mb</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Reported By:</div>
-                                                    <div class="info-content">Abhishesh Mishra</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Reason:</div>
-                                                    <div class="info-content">Violence</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Message:</div>
-                                                    <div class="info-content">sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Reported On:</div>
-                                                    <div class="info-content">15 November 2020</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Status:</div>
-                                                    <div class="info-content ">Active</div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-content ">15 sec</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="button-box">
-                                        <div class="row no-gutters">
-                                            <div class="col-6">
-                                                <button class="btn btn-primary">Decline</button>
+                                    <div class="post-info info-open-01">
+                                        <div class="close" id="info-close-01"><i class="fas fa-times"></i></div>
+                                        <div class="info-box">
+                                            <div class="row top-margin-5">
+                                                <div class="col text-center">
+                                                    <h5>Post Info</h5>
+                                                </div>
                                             </div>
-                                            <div class="col-6">
-                                                <button class="btn btn-danger">Accepted</button>
+                                            <div class="row top-margin-5">
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">PostID:</div>
+                                                        <div class="info-content">20254</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">UserID:</div>
+                                                        <div class="info-content">2014</div>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">Size:</div>
+                                                        <div class="info-content ">2.3 mb</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">Duration:</div>
+                                                        <div class="info-content ">45 sec</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">likes:</div>
+                                                        <div class="info-content ">1234</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">Views:</div>
+                                                        <div class="info-content ">4523</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-heading">Full Name:</div>
+                                                        <div class="info-content">Ankit Varshney</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-heading">User Name:</div>
+                                                        <div class="info-content">@ankitvarshney1810</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-heading">Created On:</div>
+                                                        <div class="info-content">15 September 2020</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-box">
+                                    <div class="row no-gutters">
+                                        <div class="col-6">
+                                            <button class="btn btn-light w-100">Trending</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-light w-100">Boost</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-light w-100">Private</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-light w-100">Delete</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 top-margin-20">
-                            <div class="card post">
-                                <span class="detail-icon" id="info-open-01"><i class="fas fa-angle-down"></i></span>
-                                <video controls>
-                                    <source src="images/video.mp4" type="video/mp4">
-                                </video>
-                                <div class="post-info info-open-01">
-                                    <div class="close" id="info-close-01"><i class="fas fa-times"></i></div>
-                                    <div class="info-box">
-                                        <div class="row top-margin-5">
-                                            <div class="col text-center">
-                                                <h5>Reported Post Info</h5>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col-6">
-                                                <div class="info">
-                                                    <div class="info-heading">PostID:</div>
-                                                    <div class="info-content">2023154</div>
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 top-margin-20">
+                            <div class="card">
+                                <div class="post">
+                                    <span class="detail-icon" id="info-open-01"><i class="fas fa-angle-down"></i></span>
+                                    <video controls>
+                                        <source src="video/2.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="post-basic-info">
+                                        <div class="info-box">
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-heading">ID:</div>
+                                                        <div class="info-content">202</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
-                                                <div class="info">
-                                                    <div class="info-heading">UserID:</div>
-                                                    <div class="info-content">20154</div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-content">15-09-2020</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">User Name:</div>
-                                                    <div class="info-content">Ankit Varshney</div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-content ">1.35 mb</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Reported By:</div>
-                                                    <div class="info-content">Abhishesh Mishra</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Reason:</div>
-                                                    <div class="info-content">Violence</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Message:</div>
-                                                    <div class="info-content">sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Reported On:</div>
-                                                    <div class="info-content">15 November 2020</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Status:</div>
-                                                    <div class="info-content ">Active</div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-content ">15 sec</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="button-box">
-                                        <div class="row no-gutters">
-                                            <div class="col-6">
-                                                <button class="btn btn-primary">Decline</button>
+                                    <div class="post-info info-open-01">
+                                        <div class="close" id="info-close-01"><i class="fas fa-times"></i></div>
+                                        <div class="info-box">
+                                            <div class="row top-margin-5">
+                                                <div class="col text-center">
+                                                    <h5>Post Info</h5>
+                                                </div>
                                             </div>
-                                            <div class="col-6">
-                                                <button class="btn btn-danger">Accepted</button>
+                                            <div class="row top-margin-5">
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">PostID:</div>
+                                                        <div class="info-content">20254</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">UserID:</div>
+                                                        <div class="info-content">2014</div>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">Size:</div>
+                                                        <div class="info-content ">2.3 mb</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">Duration:</div>
+                                                        <div class="info-content ">45 sec</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">likes:</div>
+                                                        <div class="info-content ">1234</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">Views:</div>
+                                                        <div class="info-content ">4523</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-heading">Full Name:</div>
+                                                        <div class="info-content">Ankit Varshney</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-heading">User Name:</div>
+                                                        <div class="info-content">@ankitvarshney1810</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-heading">Created On:</div>
+                                                        <div class="info-content">15 September 2020</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-box">
+                                    <div class="row no-gutters">
+                                        <div class="col-6">
+                                            <button class="btn btn-light w-100">Trending</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-light w-100">Boost</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-light w-100">Private</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-light w-100">Delete</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-3 top-margin-20">
-                            <div class="card post">
-                                <span class="detail-icon" id="info-open-01"><i class="fas fa-angle-down"></i></span>
-                                <video controls>
-                                    <source src="images/video3.mp4" type="video/mp4">
-                                </video>
-                                <div class="post-info info-open-01">
-                                    <div class="close" id="info-close-01"><i class="fas fa-times"></i></div>
-                                    <div class="info-box">
-                                        <div class="row top-margin-5">
-                                            <div class="col text-center">
-                                                <h5>Reported Post Info</h5>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col-6">
-                                                <div class="info">
-                                                    <div class="info-heading">PostID:</div>
-                                                    <div class="info-content">2023154</div>
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 top-margin-20">
+                            <div class="card">
+                                <div class="post">
+                                    <span class="detail-icon" id="info-open-01"><i class="fas fa-angle-down"></i></span>
+                                    <video controls>
+                                        <source src="video/3.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="post-basic-info">
+                                        <div class="info-box">
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-heading">ID:</div>
+                                                        <div class="info-content">202</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-6">
-                                                <div class="info">
-                                                    <div class="info-heading">UserID:</div>
-                                                    <div class="info-content">20154</div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-content">15-09-2020</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">User Name:</div>
-                                                    <div class="info-content">Ankit Varshney</div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-content ">1.35 mb</div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Reported By:</div>
-                                                    <div class="info-content">Abhishesh Mishra</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Reason:</div>
-                                                    <div class="info-content">Violence</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Message:</div>
-                                                    <div class="info-content">sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he sab kuch bekar he</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Reported On:</div>
-                                                    <div class="info-content">15 November 2020</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row top-margin-5">
-                                            <div class="col">
-                                                <div class="info">
-                                                    <div class="info-heading">Status:</div>
-                                                    <div class="info-content ">Active</div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-content ">15 sec</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="button-box">
-                                        <div class="row no-gutters">
-                                            <div class="col-6">
-                                                <button class="btn btn-primary">Decline</button>
+                                    <div class="post-info info-open-01">
+                                        <div class="close" id="info-close-01"><i class="fas fa-times"></i></div>
+                                        <div class="info-box">
+                                            <div class="row top-margin-5">
+                                                <div class="col text-center">
+                                                    <h5>Post Info</h5>
+                                                </div>
                                             </div>
-                                            <div class="col-6">
-                                                <button class="btn btn-danger">Accepted</button>
+                                            <div class="row top-margin-5">
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">PostID:</div>
+                                                        <div class="info-content">20254</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">UserID:</div>
+                                                        <div class="info-content">2014</div>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">Size:</div>
+                                                        <div class="info-content ">2.3 mb</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">Duration:</div>
+                                                        <div class="info-content ">45 sec</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">likes:</div>
+                                                        <div class="info-content ">1234</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="info">
+                                                        <div class="info-heading">Views:</div>
+                                                        <div class="info-content ">4523</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-heading">Full Name:</div>
+                                                        <div class="info-content">Ankit Varshney</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-heading">User Name:</div>
+                                                        <div class="info-content">@ankitvarshney1810</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-margin-5">
+                                                <div class="col">
+                                                    <div class="info">
+                                                        <div class="info-heading">Created On:</div>
+                                                        <div class="info-content">15 September 2020</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="button-box">
+                                    <div class="row no-gutters">
+                                        <div class="col-6">
+                                            <button class="btn btn-light w-100">Trending</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-light w-100">Boost</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-light w-100">Private</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button class="btn btn-light w-100">Delete</button>
                                         </div>
                                     </div>
                                 </div>
